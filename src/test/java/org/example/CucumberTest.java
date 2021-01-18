@@ -139,6 +139,8 @@ public class CucumberTest {
         //Clicking calendar button to select time interval for the filter
         driver.findElements(By.className("uitk-faux-input")).get(2).click();
 
+        Thread.sleep(1000);
+
         //Clicking one of the dates from calendar for travel
         driver.findElement(By.xpath("//*[@id=\"wizard-flight-tab-roundtrip\"]/div[2]/div[2]/div/div/div/div[1]/div/div[2]/div/div[2]/div[2]/div[2]/table/tbody/tr[2]/td[7]/button")).click();
 
@@ -152,6 +154,7 @@ public class CucumberTest {
         for ( int x = 0; x < adult; x++){driver.findElement(By.xpath("//*[@id=\"adaptive-menu\"]/div/div/section/div[1]/div[1]/div/button[2]")).click();}
 
         //Clicking + button to add child passenger number
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"adaptive-menu\"]/div/div/section/div[1]/div[2]/div/button[2]")));
         for ( int i = 0; i < child; i++){driver.findElement(By.xpath("//*[@id=\"adaptive-menu\"]/div/div/section/div[1]/div[2]/div/button[2]")).click();}
         driver.findElement(By.cssSelector("select[id=child-age-input-0-0]")).click();
 
