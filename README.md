@@ -1,4 +1,4 @@
-# Test Automation
+# Web Test Automation
 
 Automation cases:
 1. Searching a city on Google search, validate the result page and
